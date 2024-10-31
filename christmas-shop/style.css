@@ -3,4 +3,266 @@
   margin: 0;
 }
 
+#wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
+header {
+  width: 1440px;
+  height: 64px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1276px;
+  height: 64px;
+  margin: auto;
+}
+
+.logo {
+  width: 141px;
+  height: 40px;
+}
+
+.nav {
+  width: 1123px;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  margin-left: -10px;
+}
+
+.list__item {
+  list-style-type: none;
+}
+
+.list__link {
+  display: block;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #181c29;
+}
+
+.list__link:nth-child(1) {
+  width: 78px;
+}
+
+.list__link:nth-child(2) {
+  width: 88px;
+}
+
+.list__link:nth-child(3) {
+  width: 74px;
+}
+
+.list__link:nth-child(4) {
+  width: 122px;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo__img {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+.logo__title {
+  width: 70px;
+  height: 16px;
+  margin-left: 8px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15.6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #181c29;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.nav-container {
+  width: 376px;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  width: 1440px;
+  height: 524px;
+  background-color: #ff4646;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: url("/christmas-shop/assets/img/bg-snow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-snow {
+  width: 1440px;
+  height: 524px;
+  position: absolute;
+  background-image: url("/christmas-shop/assets/img/bg-ball.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-container {
+  width: 429px;
+  height: 404px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  z-index: 1;
+}
+
+.hero__text {
+  font-family: Allura;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero__title {
+  font-family: Montserrat;
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero__btn {
+  width: 235px;
+  height: 56px;
+  margin-top: 13px;
+  background-color: #181c29;
+  border: 2px solid #181c29;
+  border-radius: 20px;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15.6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero__text:last-child {
+  margin-top: 12px;
+}
+
+.about {
+  display: flex;
+  width: 1440px;
+  height: 648px;
+  background-color: #ff4646;
+  background-image: url("/christmas-shop/assets/img/bg-snow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-container {
+  display: flex;
+  width: 1276px;
+  height: 528px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  width: 638px;
+  height: 528px;
+  border-radius: 20px;
+}
+
+.about-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 426px;
+  height: 328px;
+  margin-top: 117px;
+  margin-left: 60px;
+}
+
+.about-title {
+  font-family: Allura;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #ff4646;
+}
+
+.about-header {
+  margin-top: 23px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36.48px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #181c29;
+}
+
+.about-text {
+  margin-top: 20px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.46px;
+  color: #181c29;
+}
+
+.about__img {
+  width: 638px;
+  height: 528px;
+  border-radius: 20px;
+}
+
+.slider-section {
+  width: 1440px;
+  height: 488px;
+  background-color: #ff4646;
+  background-image: url("/christmas-shop/assets/img/bg-snow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /*# sourceMappingURL=style.css.map */
