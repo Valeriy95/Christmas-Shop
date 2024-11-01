@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "rootDir": "./christmas-shop/src",
+    "outDir": "./christmas-shop/dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["christmas-shop/src/**/*"],
+  "exclude": ["node_modules"] 
+}
