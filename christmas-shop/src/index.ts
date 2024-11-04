@@ -1,3 +1,3 @@
 function sayHello(name: string): string {
-    return `Hello, ${name}!`;
+  return `Hello, ${name}!`
 }

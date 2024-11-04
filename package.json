@@ -8,6 +8,8 @@
     "format": "prettier --write .",
     "sass": "sass christmas-shop/styles/style.scss:christmas-shop/style.css",
     "sass:watch": "sass --watch christmas-shop/styles/style.scss:christmas-shop/style.css",
+    "gifts": "sass christmas-shop/styles/gifts.scss:christmas-shop/gifts.css",
+    "gifts:watch": "sass --watch christmas-shop/styles/gifts.scss:christmas-shop/gifts.css",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint --fix ."
   },

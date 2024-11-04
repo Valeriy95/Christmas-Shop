@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #wrapper {
   max-width: 1440px;
   margin: auto;
@@ -20,6 +24,11 @@ header {
   width: 1276px;
   height: 64px;
   margin: auto;
+}
+
+.logo__link,
+.footer__link_wrapper {
+  text-decoration: none;
 }
 
 .logo {
@@ -40,7 +49,10 @@ header {
 }
 
 .list__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
   text-decoration: none;
   font-family: Montserrat;
   font-size: 12px;
@@ -50,6 +62,7 @@ header {
   text-align: center;
   text-transform: uppercase;
   color: #181c29;
+  transition: 0.5s;
 }
 
 .list__link:nth-child(1) {
@@ -66,6 +79,14 @@ header {
 
 .list__link:nth-child(4) {
   width: 122px;
+}
+
+.list__link:hover {
+  cursor: pointer;
+  color: #ff4646;
+  background-color: rgba(255, 70, 70, 0.062745098);
+  border-radius: 12px;
+  transition: 0.5s;
 }
 
 .logo {
@@ -113,17 +134,17 @@ header {
   background-color: #ff4646;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-image: url("/Christmas-Shop/christmas-shop/assets/img/bg-snow.png");
-  background-size: cover;
+  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 .bg-snow {
   width: 1440px;
   height: 524px;
   position: absolute;
-  background-image: url("/Christmas-Shop/christmas-shop/assets/img/bg-ball.png");
+  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-ball.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -199,7 +220,7 @@ header {
   width: 1440px;
   height: 648px;
   background-color: #ff4646;
-  background-image: url("/Christmas-Shop/christmas-shop/assets/img/bg-snow.png");
+  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -273,7 +294,7 @@ header {
   width: 1440px;
   height: 488px;
   background-color: #ff4646;
-  background-image: url("/Christmas-Shop/christmas-shop/assets/img/bg-snow.png");
+  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -392,20 +413,39 @@ header {
   align-items: center;
   width: 56px;
   height: 56px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: 0.5s;
+}
+
+.slider-btn__left {
+  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-left.png');
+}
+
+.slider-btn__right {
+  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-right.png');
 }
 
 .slider-btn_noactive {
   opacity: 0.4;
 }
 
-.slider-btn__left:hover,
-.slider-btn__right:hover {
+.slider-btn__left_active:hover,
+.slider-btn__right_active:hover {
+  cursor: pointer;
   background-color: #ffffff;
   color: #ff4646;
   transition: 0.5s;
+}
+
+.slider-btn__right_active:hover {
+  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-right-hover.png');
+}
+
+.slider-btn__left_active:hover {
+  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-left-hover.png');
 }
 
 .best-gifts-section {
@@ -415,7 +455,7 @@ header {
   width: 1440px;
   height: 554px;
   background-color: #ff4646;
-  background-image: url("/Christmas-Shop/christmas-shop/assets/img/bg-snow.png");
+  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -457,7 +497,7 @@ header {
 .best-gifts-card-content {
   width: 310px;
   height: 110px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 20px;
 }
 
@@ -483,6 +523,7 @@ header {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #181c29;
+  transition: 0.5s;
 }
 
 .title_green {
@@ -493,6 +534,15 @@ header {
   color: #ff43f7;
 }
 
+.best-gifts-card:hover .best-gifts-card__text {
+  color: #ff4646;
+  transition: 0.5s;
+}
+
+.best-gifts-card:hover {
+  cursor: pointer;
+}
+
 .cta-section {
   display: flex;
   justify-content: center;
@@ -500,7 +550,7 @@ header {
   width: 1440px;
   height: 668px;
   background-color: #ff4646;
-  background-image: url("/Christmas-Shop/christmas-shop/assets/img/bg-snow.png");
+  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -586,7 +636,7 @@ header {
   display: block;
   margin-left: 77px;
   margin-top: -38px;
-  content: "";
+  content: '';
   border: 1px solid #fff;
   border-block: none;
   width: 1px;
@@ -635,6 +685,7 @@ footer {
   height: 204px;
   background-color: #ecf3f8;
   border-radius: 20px;
+  transition: 0.5s;
 }
 
 .footer__img {
@@ -654,6 +705,7 @@ footer {
   text-align: center;
   text-transform: uppercase;
   color: #181c29;
+  transition: 0.5s;
 }
 
 .footer__text {
@@ -667,6 +719,7 @@ footer {
   text-align: center;
   text-transform: uppercase;
   color: #181c29;
+  transition: 0.5s;
 }
 
 .footer-social {
@@ -707,6 +760,18 @@ footer {
   line-height: 23.68px;
   text-align: center;
   color: #181c29;
+}
+
+.footer-contacts:hover .footer__link,
+.footer-contacts:hover .footer__text {
+  cursor: pointer;
+  color: #ff4646;
+  transition: 0.5s;
+}
+
+.footer-contacts:hover {
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
