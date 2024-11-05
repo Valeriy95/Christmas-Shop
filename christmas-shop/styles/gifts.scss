@@ -13,7 +13,7 @@ html {
 }
 
 header {
-  width: 1440px;
+  max-width: 1440px;
   height: 64px;
 }
 
@@ -21,7 +21,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1276px;
+  max-width: 1276px;
   height: 64px;
   margin: auto;
 }
@@ -65,10 +65,6 @@ header {
   transition: 0.5s;
 }
 
-// .list__link:nth-child(1) {
-//     width: 78px;
-// }
-
 .list__link:nth-child(1) {
   width: 88px;
 }
@@ -99,13 +95,9 @@ header {
   letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
-  // color: #181c29;
   transition: 0.5s;
-  // cursor: none;
 }
 
-// .list__link:nth-child(2):hover,
-// .list__link:nth-child(3):hover,
 .list__link:hover {
   cursor: pointer;
   color: #ff4646;
@@ -156,7 +148,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  max-width: 1440px;
   height: 1394px;
   background-color: #ff4646;
   background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-gifts.png');
@@ -171,7 +163,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 1276px;
+  max-width: 1276px;
   height: 1274px;
 }
 
@@ -241,9 +233,8 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-content: space-between;
-  // align-items: center;
   flex-wrap: wrap;
-  width: 1276px;
+  max-width: 1276px;
   height: 1050px;
 }
 
@@ -312,23 +303,24 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  max-width: 1440px;
   height: 496px;
   margin: auto;
 }
 
 .footer-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1276px;
+  max-width: 1276px;
   height: 376px;
 }
 
 .footer-container-contacts {
   display: flex;
   justify-content: space-between;
-  width: 1276px;
+  max-width: 1276px;
   height: 204px;
 }
 
@@ -385,7 +377,7 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 1276px;
+  max-width: 1276px;
   height: 112px;
 }
 
@@ -430,4 +422,139 @@ footer {
 .footer-contacts:hover {
   cursor: pointer;
   transition: 0.5s;
+}
+
+@media (max-width: 1330px) and (min-width: 768px) {
+  #container {
+    width: 98%;
+  }
+
+  .logo__link {
+    padding-left: 12px;
+  }
+
+  main {
+    height: 2456px;
+  }
+
+  .gifts-section {
+    height: 2336px;
+  }
+
+  .gifts-card-container {
+    width: 85%;
+    height: 2112px;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    height: 928px;
+  }
+
+  .footer-container {
+    height: 808px;
+    width: 98%;
+  }
+
+  .footer-container-contacts {
+    flex-direction: column;
+    height: 636px;
+  }
+
+  .footer-contacts {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 380px) {
+  .burger-menu-container {
+    display: flex;
+    justify-content: end;
+    width: 599px;
+  }
+
+  .burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burger-menu__line {
+    position: absolute;
+    width: 20px;
+    height: 0px;
+    margin-top: -10px;
+    border: 1px solid #181c29;
+  }
+
+  .burger-menu__line::after {
+    position: absolute;
+    content: '';
+    margin-top: 10px;
+    left: -1px;
+    width: 20px;
+    height: 0px;
+    border: 1px solid #181c29;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 380px) {
+  .logo__link {
+    padding-left: 20px;
+  }
+
+  .burger-menu-container {
+    padding-right: 7px;
+  }
+
+  main {
+    height: 4676px;
+  }
+
+  .gifts-section {
+    height: 4556px;
+    width: 96%;
+  }
+
+  .gifts__title {
+    width: 364px;
+    height: 240px;
+  }
+
+  .gifts-tab-container {
+    width: 354px;
+  }
+
+  .gifts-tab__1 {
+    width: 50px;
+  }
+
+  .gifts-card-container {
+    height: 4236px;
+    flex-direction: column;
+  }
+
+  footer {
+    height: 928px;
+  }
+
+  .footer-container {
+    height: 808px;
+    width: 96%;
+  }
+
+  .footer-container-contacts {
+    height: 636px;
+    flex-direction: column;
+  }
+
+  .footer-contacts {
+    width: 100%;
+  }
 }
