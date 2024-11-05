@@ -13,7 +13,7 @@ html {
 }
 
 header {
-  width: 1440px;
+  max-width: 1440px;
   height: 64px;
 }
 
@@ -21,7 +21,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1276px;
+  max-width: 1276px;
   height: 64px;
   margin: auto;
 }
@@ -128,24 +128,29 @@ header {
   align-items: center;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .hero {
   display: flex;
-  width: 1440px;
+  max-width: 1440px;
   height: 524px;
   background-color: #ff4646;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
+  background-image: url('assets/img/bg-snow.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 .bg-snow {
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   height: 524px;
   position: absolute;
-  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-ball.png');
+  background-image: url('assets/img/bg-ball.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -218,10 +223,10 @@ header {
 
 .about {
   display: flex;
-  width: 1440px;
+  max-width: 1440px;
   height: 648px;
   background-color: #ff4646;
-  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
+  background-image: url('assets/img/bg-snow.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -229,7 +234,7 @@ header {
 
 .about-container {
   display: flex;
-  width: 1276px;
+  max-width: 1276px;
   height: 528px;
   margin: auto;
   background-color: #ffffff;
@@ -286,33 +291,38 @@ header {
   width: 638px;
   height: 528px;
   border-radius: 20px;
+  background-image: url('assets/img/santa.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .slider-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  max-width: 1440px;
   height: 488px;
   background-color: #ff4646;
-  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
+  background-image: url('assets/img/bg-snow.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .slider-container {
-  width: 1276px;
+  max-width: 1276px;
   height: 368px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 
 .slider-content {
   width: 426px;
   height: 72px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slider__text,
@@ -343,8 +353,10 @@ header {
 }
 
 .slider-wrapper {
-  width: 1276px;
+  max-width: 1276px;
   height: 200px;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 }
 
@@ -390,7 +402,7 @@ header {
 }
 
 .slider-btn-container {
-  width: 1276px;
+  max-width: 100%;
   height: 56px;
 }
 
@@ -422,11 +434,11 @@ header {
 }
 
 .slider-btn__left {
-  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-left.png');
+  background-image: url('assets/icon/arrow-left.png');
 }
 
 .slider-btn__right {
-  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-right.png');
+  background-image: url('assets/icon/arrow-right.png');
 }
 
 .slider-btn_noactive {
@@ -442,21 +454,21 @@ header {
 }
 
 .slider-btn__right_active:hover {
-  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-right-hover.png');
+  background-image: url('assets/icon/arrow-right-hover.png');
 }
 
 .slider-btn__left_active:hover {
-  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-left-hover.png');
+  background-image: url('assets/icon/arrow-left-hover.png');
 }
 
 .best-gifts-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  max-width: 1440px;
   height: 554px;
   background-color: #ff4646;
-  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
+  background-image: url('assets/img/bg-snow.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -467,7 +479,8 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 1276px;
+  width: 100%;
+  max-width: 1276px;
   height: 434px;
 }
 
@@ -479,7 +492,8 @@ header {
 .best-gifts-content {
   display: flex;
   justify-content: space-between;
-  width: 1276px;
+  width: 100%;
+  max-width: 1276px;
   height: 342px;
 }
 
@@ -548,18 +562,23 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  max-width: 1440px;
   height: 668px;
   background-color: #ff4646;
-  background-image: url('/Christmas-Shop/christmas-shop/assets/img/bg-snow.png');
+  background-image: url('assets/img/bg-snow.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .cta__img {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   height: 668px;
+  background-image: url('assets/img/bg-forest.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .cta-container {
@@ -657,7 +676,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  max-width: 1440px;
   height: 496px;
   margin: auto;
 }
@@ -666,14 +685,16 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1276px;
+  width: 100%;
+  max-width: 1276px;
   height: 376px;
 }
 
 .footer-container-contacts {
   display: flex;
   justify-content: space-between;
-  width: 1276px;
+  width: 100%;
+  max-width: 1276px;
   height: 204px;
 }
 
@@ -730,7 +751,7 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 1276px;
+  max-width: 1276px;
   height: 112px;
 }
 
@@ -775,4 +796,273 @@ footer {
 .footer-contacts:hover {
   cursor: pointer;
   transition: 0.5s;
+}
+
+@media (max-width: 1330px) and (min-width: 768px) {
+  header {
+    max-width: 1279px;
+    height: 64px;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .nav {
+    padding-right: 30px;
+    margin-left: 0;
+  }
+
+  .hero {
+    max-width: 1330px;
+  }
+
+  .bg-snow {
+    width: 100%;
+  }
+
+  .hero {
+    background-size: cover;
+  }
+
+  .about {
+    max-width: 1330px;
+  }
+
+  .about-container {
+    width: 98%;
+  }
+
+  .about-content {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .about__img {
+    width: 50%;
+  }
+
+  .about-content-wrapper {
+    width: 256px;
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .slider-section {
+    max-width: 1330px;
+  }
+
+  .slider-container {
+    width: 100%;
+  }
+
+  .slider-btn-container {
+    max-width: 99%;
+  }
+
+  .slider-wrapper {
+    width: 98%;
+  }
+
+  .best-gifts-section {
+    max-width: 1330px;
+    height: 908px;
+  }
+
+  .best-gifts-container {
+    max-width: 100%;
+    height: 788px;
+    margin-top: -13px;
+  }
+
+  .best-gifts-content {
+    height: 696px;
+    display: grid;
+    grid-template-columns: 321px 321px;
+    grid-template-rows: 348px 348px;
+    justify-content: center;
+    row-gap: 8px;
+    column-gap: 0px;
+    align-items: baseline;
+  }
+
+  .best-gifts-card {
+    margin: auto;
+  }
+
+  footer {
+    max-width: 1000px;
+    height: 928px;
+  }
+
+  .footer-container {
+    width: 98%;
+    height: 808px;
+  }
+
+  .footer-container-contacts {
+    max-width: 1000px;
+    height: 636px;
+    flex-wrap: wrap;
+  }
+
+  .footer__link_wrapper,
+  .footer-contacts {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 380px) {
+  .burger-menu-container {
+    display: flex;
+    justify-content: end;
+    width: 599px;
+  }
+
+  .burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burger-menu__line {
+    position: absolute;
+    width: 20px;
+    height: 0px;
+    margin-top: -10px;
+    border: 1px solid #181c29;
+  }
+
+  .burger-menu__line::after {
+    position: absolute;
+    content: '';
+    margin-top: 10px;
+    left: -1px;
+    width: 20px;
+    height: 0px;
+    border: 1px solid #181c29;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 380px) {
+  .logo__link {
+    padding-left: 20px;
+  }
+
+  .burger-menu-container {
+    padding-right: 10px;
+  }
+
+  .hero {
+    height: 572px;
+  }
+
+  .hero-container {
+    width: 364px;
+    height: 452px;
+  }
+
+  .bg-snow {
+    height: 572px;
+  }
+
+  .about {
+    height: 1000px;
+  }
+
+  .about-container {
+    height: 880px;
+    flex-direction: column;
+  }
+
+  .about-content {
+    width: 364px;
+    height: 352px;
+  }
+
+  .about-content-wrapper {
+    margin-top: 92px;
+    margin-left: 21px;
+  }
+
+  .about__img {
+    width: 100%;
+  }
+
+  .slider-container {
+    width: 96%;
+  }
+
+  .slider-content {
+    width: 364px;
+  }
+
+  .slider-wrapper {
+    width: 100%;
+  }
+
+  .best-gifts-section {
+    height: 1616px;
+  }
+
+  .best-gifts-container {
+    height: 1496px;
+  }
+
+  .best-gifts-texts {
+    width: 364px;
+  }
+
+  .best-gifts-content {
+    height: 1404px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-section {
+    height: 704px;
+  }
+
+  .cta-container {
+    width: 364px;
+    height: 584px;
+    margin-top: 241px;
+  }
+
+  .cta__img {
+    height: 704px;
+  }
+
+  footer {
+    height: 928px;
+  }
+
+  .footer-container {
+    height: 808px;
+  }
+
+  .footer-container-contacts {
+    height: 636px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__link_wrapper {
+    width: 96%;
+  }
+
+  .footer-contacts {
+    width: 100%;
+  }
+  .footer__link,
+  .footer__text {
+    width: 324px;
+  }
 }
