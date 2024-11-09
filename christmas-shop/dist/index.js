@@ -2,13 +2,13 @@ const body = document.querySelector('body');
 const burgerMenuIcon = document.querySelector('.burger-menu');
 const burgerMenuFon = document.querySelector('.burger-menu-fon');
 const burgerMenuLine = document.querySelector('.burger-menu__line');
-export const burgerMenuLineTwo = document.querySelector('.burger-menu__line_two');
+const burgerMenuLineTwo = document.querySelector('.burger-menu__line_two');
 const burgerMenuListLink = document.querySelectorAll('.burger-menu-list__link');
 for (let i = 0; i < burgerMenuListLink.length; i++) {
     burgerMenuListLink[i].addEventListener('click', openCloseBurgerMenu);
 }
 burgerMenuIcon.addEventListener('click', openCloseBurgerMenu);
-export function openCloseBurgerMenu() {
+function openCloseBurgerMenu() {
     body.classList.toggle('overflow');
     burgerMenuLine.classList.toggle('rotate-line');
     burgerMenuLineTwo.classList.toggle('rotate-line-two');
@@ -552,7 +552,6 @@ function renderingRandomCard() {
             if (attributeName) {
                 if (findGiftByName(giftsObject, attributeName)) {
                     const currentGiftObj = findGiftByName(giftsObject, attributeName);
-                    // console.log(findGiftByName(giftsObject, attributeName))
                     openModalWindow(currentGiftObj);
                 }
             }
@@ -648,3 +647,4 @@ function closeModalWindow() {
         allIconsDream[i].style.opacity = '0.3';
     }
 }
+

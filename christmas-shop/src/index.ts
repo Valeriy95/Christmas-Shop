@@ -6,7 +6,7 @@ const burgerMenuFon = document.querySelector('.burger-menu-fon') as HTMLElement
 const burgerMenuLine = document.querySelector(
   '.burger-menu__line',
 ) as HTMLElement
-export const burgerMenuLineTwo = document.querySelector(
+const burgerMenuLineTwo = document.querySelector(
   '.burger-menu__line_two',
 ) as HTMLElement
 const burgerMenuListLink: NodeListOf<HTMLAnchorElement> =
@@ -18,7 +18,7 @@ for (let i = 0; i < burgerMenuListLink.length; i++) {
 
 burgerMenuIcon.addEventListener('click', openCloseBurgerMenu)
 
-export function openCloseBurgerMenu(): void {
+function openCloseBurgerMenu(): void {
   body.classList.toggle('overflow')
   burgerMenuLine.classList.toggle('rotate-line')
   burgerMenuLineTwo.classList.toggle('rotate-line-two')
