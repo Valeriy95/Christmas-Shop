@@ -1,3 +1,5 @@
+import { giftsObjectType } from './types'
+
 const body = document.querySelector('body') as HTMLElement
 const burgerMenuIcon = document.querySelector('.burger-menu') as HTMLElement
 const burgerMenuFon = document.querySelector('.burger-menu-fon') as HTMLElement
@@ -611,8 +613,6 @@ function getRandomGifts() {
   return selectedGifts
 }
 
-console.log(getRandomGifts())
-
 const bestGiftsContent = document.querySelector(
   '.best-gifts-content',
 ) as HTMLElement
@@ -632,6 +632,13 @@ function renderingRandomCard() {
     const bestGiftsCardTitle = document.createElement('h4')
     bestGiftsCardTitle.className = 'best-gifts-card__title'
     bestGiftsCardTitle.textContent = arrGifts[i].category
+    if (bestGiftsCardTitle.innerText === 'For Work') {
+      bestGiftsCardTitle.classList.add('text_blue')
+    } else if (bestGiftsCardTitle.innerText === 'For Harmony') {
+      bestGiftsCardTitle.classList.add('text_pink')
+    } else {
+      bestGiftsCardTitle.classList.add('text_green')
+    }
     const bestGiftsCardText = document.createElement('h3')
     bestGiftsCardText.className = 'best-gifts-card__text'
     bestGiftsCardText.textContent = arrGifts[i].name
@@ -640,20 +647,153 @@ function renderingRandomCard() {
     bestGiftsCard.append(bestGiftsCardContent)
     bestGiftsCardContent.append(bestGiftsCardTitle)
     bestGiftsCardContent.append(bestGiftsCardText)
-
     bestGiftsCard.addEventListener('click', function (e) {
       const target = e.currentTarget as HTMLElement
       const attributeName = target.getAttribute('data-name')
-
       if (attributeName) {
-        console.log(findGiftByName(giftsObject, attributeName))
+        if (findGiftByName(giftsObject, attributeName)) {
+          const currentGiftObj: giftsObjectType = findGiftByName(
+            giftsObject,
+            attributeName,
+          )
+          openModalWindow(currentGiftObj)
+        }
       }
     })
   }
 }
 
 function findGiftByName(gifts: typeof giftsObject, name: string) {
-  return gifts.find((gift) => gift.name === name)
+  return gifts.find((gift) => gift.name === name) as giftsObjectType
 }
 
 renderingRandomCard()
+
+// Modal window
+
+const modalWindow = document.querySelector('.modal-window') as HTMLElement
+
+const modalWindowCardImg = document.querySelector(
+  '.modal-window-card__img',
+) as HTMLImageElement
+const modalWindowCardContentCategory = document.querySelector(
+  '.modal-window-card-content__category',
+) as HTMLImageElement
+const modalWindowCardContentName = document.querySelector(
+  '.modal-window-card-content__name',
+) as HTMLImageElement
+const modalWindowCardContentDesc = document.querySelector(
+  '.modal-window-card-content__desc',
+) as HTMLImageElement
+const modalWindowCardLiveNumber = document.querySelector(
+  '.modal-window-card-live__number',
+) as HTMLImageElement
+const modalWindowCardCreateNumber = document.querySelector(
+  '.modal-window-card-create__number',
+) as HTMLImageElement
+const modalWindowCardLoveNumber = document.querySelector(
+  '.modal-window-card-love__number',
+) as HTMLImageElement
+const modalWindowCardDreamNumber = document.querySelector(
+  '.modal-window-card-dream__number',
+) as HTMLImageElement
+
+const allIconsLive = document.querySelectorAll(
+  '.modal-window-card-icon__live',
+) as NodeListOf<HTMLElement>
+
+const allIconsCreate = document.querySelectorAll(
+  '.modal-window-card-icon__create',
+) as NodeListOf<HTMLElement>
+
+const allIconsLove = document.querySelectorAll(
+  '.modal-window-card-icon__love',
+) as NodeListOf<HTMLElement>
+
+const allIconsDream = document.querySelectorAll(
+  '.modal-window-card-icon__dream',
+) as NodeListOf<HTMLElement>
+
+const modalIconClose = document.querySelector(
+  '.modal-window-icon-close',
+) as HTMLElement
+
+function openModalWindow(gifts: giftsObjectType) {
+  modalWindow.style.display = 'flex'
+  body.style.overflow = 'hidden'
+  console.log(gifts)
+
+  modalWindowCardImg.src = `../assets/img/${gifts.category}.png`
+  modalWindowCardContentCategory.textContent = gifts.category
+  if (modalWindowCardContentCategory.innerText === 'FOR WORK') {
+    modalWindowCardContentCategory.classList.add('text_blue')
+  } else if (modalWindowCardContentCategory.innerText === 'FOR HARMONY') {
+    modalWindowCardContentCategory.classList.add('text_pink')
+  } else {
+    modalWindowCardContentCategory.classList.add('text_green')
+  }
+  modalWindowCardContentName.textContent = gifts.name
+  modalWindowCardContentDesc.textContent = gifts.description
+  modalWindowCardLiveNumber.textContent = gifts.superpowers.live
+  modalWindowCardCreateNumber.textContent = gifts.superpowers.create
+  modalWindowCardLoveNumber.textContent = gifts.superpowers.love
+  modalWindowCardDreamNumber.textContent = gifts.superpowers.dream
+
+  const liveNumber: number = +modalWindowCardLiveNumber.textContent.slice(1, 2)
+  const createNumber: number = +modalWindowCardCreateNumber.textContent.slice(
+    1,
+    2,
+  )
+  const loveNumber: number = +modalWindowCardLoveNumber.textContent.slice(1, 2)
+  const dreamNumber: number = +modalWindowCardDreamNumber.textContent.slice(
+    1,
+    2,
+  )
+
+  for (let i = 0; i < liveNumber; i++) {
+    allIconsLive[i].style.opacity = '1'
+  }
+  for (let i = 0; i < createNumber; i++) {
+    allIconsCreate[i].style.opacity = '1'
+  }
+  for (let i = 0; i < loveNumber; i++) {
+    allIconsLove[i].style.opacity = '1'
+  }
+  for (let i = 0; i < dreamNumber; i++) {
+    allIconsDream[i].style.opacity = '1'
+  }
+}
+
+document.addEventListener('click', function (e) {
+  const target = e.target as HTMLElement
+
+  if (target && target.classList.contains('modal-window')) {
+    closeModalWindow()
+  }
+})
+
+modalIconClose.addEventListener('click', closeModalWindow)
+
+function closeModalWindow() {
+  modalWindow.style.display = 'none'
+  body.style.overflow = 'auto'
+  if (modalWindowCardContentCategory.classList.contains('text_blue')) {
+    modalWindowCardContentCategory.classList.remove('text_blue')
+  } else if (modalWindowCardContentCategory.classList.contains('text_pink')) {
+    modalWindowCardContentCategory.classList.remove('text_pink')
+  } else {
+    modalWindowCardContentCategory.classList.remove('text_green')
+  }
+  for (let i = 0; i < 5; i++) {
+    allIconsLive[i].style.opacity = '0.3'
+  }
+  for (let i = 0; i < 5; i++) {
+    allIconsCreate[i].style.opacity = '0.3'
+  }
+  for (let i = 0; i < 5; i++) {
+    allIconsLove[i].style.opacity = '0.3'
+  }
+  for (let i = 0; i < 5; i++) {
+    allIconsDream[i].style.opacity = '0.3'
+  }
+}

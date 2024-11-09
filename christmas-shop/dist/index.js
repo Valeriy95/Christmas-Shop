@@ -514,7 +514,6 @@ function getRandomGifts() {
     }
     return selectedGifts;
 }
-console.log(getRandomGifts());
 const bestGiftsContent = document.querySelector('.best-gifts-content');
 function renderingRandomCard() {
     const arrGifts = getRandomGifts();
@@ -530,6 +529,15 @@ function renderingRandomCard() {
         const bestGiftsCardTitle = document.createElement('h4');
         bestGiftsCardTitle.className = 'best-gifts-card__title';
         bestGiftsCardTitle.textContent = arrGifts[i].category;
+        if (bestGiftsCardTitle.innerText === 'For Work') {
+            bestGiftsCardTitle.classList.add('text_blue');
+        }
+        else if (bestGiftsCardTitle.innerText === 'For Harmony') {
+            bestGiftsCardTitle.classList.add('text_pink');
+        }
+        else {
+            bestGiftsCardTitle.classList.add('text_green');
+        }
         const bestGiftsCardText = document.createElement('h3');
         bestGiftsCardText.className = 'best-gifts-card__text';
         bestGiftsCardText.textContent = arrGifts[i].name;
@@ -542,7 +550,11 @@ function renderingRandomCard() {
             const target = e.currentTarget;
             const attributeName = target.getAttribute('data-name');
             if (attributeName) {
-                console.log(findGiftByName(giftsObject, attributeName));
+                if (findGiftByName(giftsObject, attributeName)) {
+                    const currentGiftObj = findGiftByName(giftsObject, attributeName);
+                    // console.log(findGiftByName(giftsObject, attributeName))
+                    openModalWindow(currentGiftObj);
+                }
             }
         });
     }
@@ -551,3 +563,88 @@ function findGiftByName(gifts, name) {
     return gifts.find((gift) => gift.name === name);
 }
 renderingRandomCard();
+// Modal window
+const modalWindow = document.querySelector('.modal-window');
+const modalWindowCardImg = document.querySelector('.modal-window-card__img');
+const modalWindowCardContentCategory = document.querySelector('.modal-window-card-content__category');
+const modalWindowCardContentName = document.querySelector('.modal-window-card-content__name');
+const modalWindowCardContentDesc = document.querySelector('.modal-window-card-content__desc');
+const modalWindowCardLiveNumber = document.querySelector('.modal-window-card-live__number');
+const modalWindowCardCreateNumber = document.querySelector('.modal-window-card-create__number');
+const modalWindowCardLoveNumber = document.querySelector('.modal-window-card-love__number');
+const modalWindowCardDreamNumber = document.querySelector('.modal-window-card-dream__number');
+const allIconsLive = document.querySelectorAll('.modal-window-card-icon__live');
+const allIconsCreate = document.querySelectorAll('.modal-window-card-icon__create');
+const allIconsLove = document.querySelectorAll('.modal-window-card-icon__love');
+const allIconsDream = document.querySelectorAll('.modal-window-card-icon__dream');
+const modalIconClose = document.querySelector('.modal-window-icon-close');
+function openModalWindow(gifts) {
+    modalWindow.style.display = 'flex';
+    body.style.overflow = 'hidden';
+    console.log(gifts);
+    modalWindowCardImg.src = `../assets/img/${gifts.category}.png`;
+    modalWindowCardContentCategory.textContent = gifts.category;
+    if (modalWindowCardContentCategory.innerText === 'FOR WORK') {
+        modalWindowCardContentCategory.classList.add('text_blue');
+    }
+    else if (modalWindowCardContentCategory.innerText === 'FOR HARMONY') {
+        modalWindowCardContentCategory.classList.add('text_pink');
+    }
+    else {
+        modalWindowCardContentCategory.classList.add('text_green');
+    }
+    modalWindowCardContentName.textContent = gifts.name;
+    modalWindowCardContentDesc.textContent = gifts.description;
+    modalWindowCardLiveNumber.textContent = gifts.superpowers.live;
+    modalWindowCardCreateNumber.textContent = gifts.superpowers.create;
+    modalWindowCardLoveNumber.textContent = gifts.superpowers.love;
+    modalWindowCardDreamNumber.textContent = gifts.superpowers.dream;
+    const liveNumber = +modalWindowCardLiveNumber.textContent.slice(1, 2);
+    const createNumber = +modalWindowCardCreateNumber.textContent.slice(1, 2);
+    const loveNumber = +modalWindowCardLoveNumber.textContent.slice(1, 2);
+    const dreamNumber = +modalWindowCardDreamNumber.textContent.slice(1, 2);
+    for (let i = 0; i < liveNumber; i++) {
+        allIconsLive[i].style.opacity = '1';
+    }
+    for (let i = 0; i < createNumber; i++) {
+        allIconsCreate[i].style.opacity = '1';
+    }
+    for (let i = 0; i < loveNumber; i++) {
+        allIconsLove[i].style.opacity = '1';
+    }
+    for (let i = 0; i < dreamNumber; i++) {
+        allIconsDream[i].style.opacity = '1';
+    }
+}
+document.addEventListener('click', function (e) {
+    const target = e.target;
+    if (target && target.classList.contains('modal-window')) {
+        closeModalWindow();
+    }
+});
+modalIconClose.addEventListener('click', closeModalWindow);
+function closeModalWindow() {
+    modalWindow.style.display = 'none';
+    body.style.overflow = 'auto';
+    if (modalWindowCardContentCategory.classList.contains('text_blue')) {
+        modalWindowCardContentCategory.classList.remove('text_blue');
+    }
+    else if (modalWindowCardContentCategory.classList.contains('text_pink')) {
+        modalWindowCardContentCategory.classList.remove('text_pink');
+    }
+    else {
+        modalWindowCardContentCategory.classList.remove('text_green');
+    }
+    for (let i = 0; i < 5; i++) {
+        allIconsLive[i].style.opacity = '0.3';
+    }
+    for (let i = 0; i < 5; i++) {
+        allIconsCreate[i].style.opacity = '0.3';
+    }
+    for (let i = 0; i < 5; i++) {
+        allIconsLove[i].style.opacity = '0.3';
+    }
+    for (let i = 0; i < 5; i++) {
+        allIconsDream[i].style.opacity = '0.3';
+    }
+}
