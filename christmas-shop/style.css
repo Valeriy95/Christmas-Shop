@@ -182,7 +182,7 @@ header {
   background-color: #ff4646;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-image: url('assets/img/bg-snow.png');
+  background-image: url("assets/img/bg-snow.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
@@ -193,7 +193,7 @@ header {
   max-width: 1440px;
   height: 524px;
   position: absolute;
-  background-image: url('assets/img/bg-ball.png');
+  background-image: url("assets/img/bg-ball.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -269,7 +269,7 @@ header {
   max-width: 1440px;
   height: 648px;
   background-color: #ff4646;
-  background-image: url('assets/img/bg-snow.png');
+  background-image: url("assets/img/bg-snow.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -334,7 +334,7 @@ header {
   width: 638px;
   height: 528px;
   border-radius: 20px;
-  background-image: url('assets/img/santa.png');
+  background-image: url("assets/img/santa.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -347,7 +347,7 @@ header {
   max-width: 1440px;
   height: 488px;
   background-color: #ff4646;
-  background-image: url('assets/img/bg-snow.png');
+  background-image: url("assets/img/bg-snow.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -478,11 +478,11 @@ header {
 }
 
 .slider-btn__left {
-  background-image: url('assets/icon/arrow-left.png');
+  background-image: url("assets/icon/arrow-left.png");
 }
 
 .slider-btn__right {
-  background-image: url('assets/icon/arrow-right.png');
+  background-image: url("assets/icon/arrow-right.png");
 }
 
 .slider-btn_noactive {
@@ -498,11 +498,11 @@ header {
 }
 
 .slider-btn__right_active:hover {
-  background-image: url('assets/icon/arrow-right-hover.png');
+  background-image: url("assets/icon/arrow-right-hover.png");
 }
 
 .slider-btn__left_active:hover {
-  background-image: url('assets/icon/arrow-left-hover.png');
+  background-image: url("assets/icon/arrow-left-hover.png");
 }
 
 .best-gifts-section {
@@ -512,7 +512,7 @@ header {
   max-width: 1440px;
   height: 554px;
   background-color: #ff4646;
-  background-image: url('assets/img/bg-snow.png');
+  background-image: url("assets/img/bg-snow.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -609,7 +609,7 @@ header {
   max-width: 1440px;
   height: 668px;
   background-color: #ff4646;
-  background-image: url('assets/img/bg-snow.png');
+  background-image: url("assets/img/bg-snow.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -619,7 +619,7 @@ header {
   max-width: 1440px;
   width: 100%;
   height: 668px;
-  background-image: url('assets/img/bg-forest.png');
+  background-image: url("assets/img/bg-forest.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -700,7 +700,7 @@ header {
   display: block;
   margin-left: 77px;
   margin-top: -38px;
-  content: '';
+  content: "";
   border: 1px solid #fff;
   border-block: none;
   width: 1px;

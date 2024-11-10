@@ -482,18 +482,6 @@ main {
   cursor: pointer;
 }
 
-// .text_blue {
-//   color: #4361ff;
-// }
-
-// .title_green {
-//   color: #06a44f;
-// }
-
-// .title_pink {
-//   color: #ff43f7;
-// }
-
 footer {
   display: flex;
   justify-content: center;
@@ -635,6 +623,30 @@ footer {
   color: #06a44f;
 }
 
+.btn-up {
+  width: 56px;
+  height: 56px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  background-image: url('/Christmas-Shop/christmas-shop/assets/icon/arrow-top.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: initial;
+}
+
+.btn-up:hover {
+  cursor: pointer;
+}
+
+.show-btn-up {
+  display: block;
+}
+
 @media (max-width: 1330px) and (min-width: 768px) {
   #container {
     width: 98%;
@@ -675,6 +687,7 @@ footer {
   .footer-contacts {
     width: 100%;
   }
+
 }
 
 @media (max-width: 800px) and (min-width: 380px) {
@@ -764,9 +777,10 @@ footer {
     rotate: -45deg;
     margin-top: -9px;
   }
+
 }
 
-@media (max-width: 767px) and (min-width: 380px) {
+@media (max-width: 768px) and (min-width: 380px) {
   .logo__link {
     padding-left: 20px;
   }

@@ -619,6 +619,26 @@ footer {
   color: #06a44f;
 }
 
+.btn-up {
+  width: 56px;
+  height: 56px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  background-image: url("/Christmas-Shop/christmas-shop/assets/icon/arrow-top.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: initial;
+}
+
+.show-btn-up {
+  display: block;
+}
+
 @media (max-width: 1330px) and (min-width: 768px) {
   #container {
     width: 98%;
@@ -730,7 +750,7 @@ footer {
     margin-top: -9px;
   }
 }
-@media (max-width: 767px) and (min-width: 380px) {
+@media (max-width: 768px) and (min-width: 380px) {
   .logo__link {
     padding-left: 20px;
   }

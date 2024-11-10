@@ -1,4 +1,3 @@
-// import { giftsObject, openCloseBurgerMenu } from './index.js'
 const burgerMenuIcon = document.querySelector('.burger-menu');
 const body = document.querySelector('body');
 const burgerMenuLine = document.querySelector('.burger-menu__line');
@@ -17,7 +16,7 @@ function openCloseBurgerMenu() {
     burgerMenuLineTwo.classList.toggle('rotate-line-two');
     burgerMenuFon.classList.toggle('open-burger-menu-nav-container');
 }
-// Button UP
+// Category switching
 const giftsObject = [
     {
         name: 'Bug Magnet',
@@ -498,7 +497,6 @@ function getRandomGifts() {
     return selectedGifts;
 }
 function renderingCard(arrCar) {
-    // const arrGifts = getRandomGifts()
     for (let i = 0; i < arrCar.length; i++) {
         const giftsCard = document.createElement('div');
         giftsCard.className = 'gifts-card';
@@ -629,4 +627,25 @@ function closeModalWindow() {
         allIconsDream[i].style.opacity = '0.3';
     }
 }
-
+// Button UP
+const btnUp = document.querySelector('.btn-up');
+function toggleScrollButton() {
+    if (window.innerWidth <= 768) {
+        if (window.scrollY > 100) {
+            btnUp.classList.add('show-btn-up');
+        }
+        else {
+            btnUp.classList.remove('show-btn-up');
+        }
+    }
+    else {
+        btnUp.classList.remove('show-btn-up');
+    }
+}
+function scrollToTop() {
+    window.scrollTo({ top: 0 });
+}
+btnUp.addEventListener('click', scrollToTop);
+window.addEventListener('scroll', toggleScrollButton);
+window.addEventListener('resize', toggleScrollButton);
+export {};

@@ -1,5 +1,3 @@
-// import { giftsObject, openCloseBurgerMenu } from './index.js'
-
 import { giftsObjectType } from './types'
 
 const burgerMenuIcon = document.querySelector('.burger-menu') as HTMLElement
@@ -31,7 +29,7 @@ function openCloseBurgerMenu(): void {
   burgerMenuFon.classList.toggle('open-burger-menu-nav-container')
 }
 
-// Button UP
+// Category switching
 const giftsObject = [
   {
     name: 'Bug Magnet',
@@ -554,8 +552,6 @@ function getRandomGifts() {
 }
 
 function renderingCard(arrCar: typeof giftsObject) {
-  // const arrGifts = getRandomGifts()
-
   for (let i = 0; i < arrCar.length; i++) {
     const giftsCard = document.createElement('div')
     giftsCard.className = 'gifts-card'
@@ -729,3 +725,29 @@ function closeModalWindow() {
     allIconsDream[i].style.opacity = '0.3'
   }
 }
+
+// Button UP
+
+const btnUp = document.querySelector('.btn-up') as HTMLDivElement
+
+function toggleScrollButton() {
+  if (window.innerWidth <= 768) {
+    if (window.scrollY > 100) {
+      btnUp.classList.add('show-btn-up')
+    } else {
+      btnUp.classList.remove('show-btn-up')
+    }
+  } else {
+    btnUp.classList.remove('show-btn-up')
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0 })
+}
+
+btnUp.addEventListener('click', scrollToTop)
+
+window.addEventListener('scroll', toggleScrollButton)
+
+window.addEventListener('resize', toggleScrollButton)
