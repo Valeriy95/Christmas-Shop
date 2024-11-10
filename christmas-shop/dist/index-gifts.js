@@ -648,4 +648,4 @@ function scrollToTop() {
 btnUp.addEventListener('click', scrollToTop);
 window.addEventListener('scroll', toggleScrollButton);
 window.addEventListener('resize', toggleScrollButton);
-export {};
+

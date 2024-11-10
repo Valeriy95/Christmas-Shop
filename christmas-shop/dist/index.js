@@ -647,4 +647,4 @@ function closeModalWindow() {
         allIconsDream[i].style.opacity = '0.3';
     }
 }
-export {};
+
